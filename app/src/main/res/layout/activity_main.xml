@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/billAmtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="34dp"
+        android:text="Bill Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/billAmtTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/billAmtLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="35dp"
+        android:text="Percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmtLabel" />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="33dp"
+        android:text="Tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentLabel" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="26dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipLabel" />
+
+    <TextView
+        android:id="@+id/roundingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="32dp"
+        android:text="Rounding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel" />
+
+    <TextView
+        android:id="@+id/splitBillLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="88dp"
+        android:text="Split Bill?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundingLabel" />
+
+    <TextView
+        android:id="@+id/perPersonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="31dp"
+        android:text="Per Person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitBillLabel" />
+
+    <Button
+        android:id="@+id/applyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="32dp"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/plusBtn"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="19dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/percentResult"
+        app:layout_constraintTop_toBottomOf="@+id/billAmtTextBox" />
+
+    <Button
+        android:id="@+id/minusBtn"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginRight="74dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/plusBtn"
+        app:layout_constraintTop_toBottomOf="@+id/billAmtTextBox" />
+
+    <TextView
+        android:id="@+id/percentResult"
+        android:layout_width="66dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="26dp"
+        android:text="$0.00"
+        app:layout_constraintStart_toEndOf="@+id/percentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/billAmtTextBox" />
+
+    <TextView
+        android:id="@+id/tipResult"
+        android:layout_width="66dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginRight="188dp"
+        android:text="$0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentResult" />
+
+    <TextView
+        android:id="@+id/totalResult"
+        android:layout_width="64dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginRight="188dp"
+        android:text="$0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tipResult" />
+
+    <RadioGroup
+        android:id="@+id/roundingRadioGroup"
+        android:layout_width="144dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/splitBillSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundingLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalResult">
+
+        <RadioButton
+            android:id="@+id/roundingNoneRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/roundingTipRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tip" />
+
+        <RadioButton
+            android:id="@+id/roundingTotalRadio"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/splitBillSpinner"
+        android:layout_width="200dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/splitBillLabel"
+        app:layout_constraintTop_toBottomOf="@+id/roundingRadioGroup" />
+
+    <TextView
+        android:id="@+id/perPersonResult"
+        android:layout_width="128dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginRight="111dp"
+        android:text="$0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/perPersonLabel"
+        app:layout_constraintTop_toBottomOf="@+id/splitBillSpinner" />
+
+</android.support.constraint.ConstraintLayout>

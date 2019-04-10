@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">android_tipcalc</string>
+    <string-array name="split_array">
+        <item>Do Not Split</item>
+        <item>2 Ways</item>
+        <item>3 Ways</item>
+        <item>4 Ways</item>
+    </string-array>
+</resources>
